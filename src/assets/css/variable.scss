@@ -1,0 +1,19 @@
+$color-primary: var(--blue);
+$color-secondary: var(--shade-white);
+$color-black: var(--black);
+$color-gray-dark: var(--gray-dark);
+$color-light-gray: var(--gray);
+$color-white: var(--white);
+
+
+$mont-reg: "Montserrat-Regular";
+$mont-bold: "Montserrat-semi-bold";
+
+:root {
+  --blue: #5E56E7;;
+  --white: #ffffff;
+  --shade-white: #F8F7FF;
+  --black: #333333;
+  --gray: #F0F0F6;
+  --gray-dark: #A0A0A0;
+}

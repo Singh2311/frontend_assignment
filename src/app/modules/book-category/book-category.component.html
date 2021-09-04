@@ -1,0 +1,30 @@
+<div class="book-category w-100">
+    <div
+        class="row book-category-head col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-10 offset-1 ">
+        <div class="heading-title f-s-48 p-0">
+
+            Gutenberg Project
+        </div>
+        <div class="para-section mt-2 p-0">
+            A social cataloging website that allows you to freely search its database of books, annotations,
+            and reviews.
+        </div>
+    </div>
+    <div
+        class="row col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-sm-8 offset-sm-2 category-list d-flex justify-content-between mt-3 col-10 offset-1">
+        <div class="col-lg-5 col-md-5  category-list-card" *ngFor="let list of genereList" (click)="getBooks(list)">
+            <div class="d-flex align-items-center w-100">
+                <div class="flex-shrink-0">
+                    <img [src]="list.image" alt="...">
+                </div>
+                <div class="flex-grow-1 ms-3 name-text w-100 f-s-20">
+                    {{list.name}}
+                </div>
+                <div class="flex-shrink-1">
+                    <img src="assets/image/Next.svg" alt="...">
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

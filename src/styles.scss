@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/variable";
+
+body{
+    font-size: 20px;
+    font-family: $mont-reg;
+    background-color: $color-light-gray;
+}
+
+
+@font-face {
+    font-family: "Montserrat-Regular";
+    src: url("assets/fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Montserrat-semi-bold";
+    src: url("assets/fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+    font-style: normal;
+  }
+
+.f-s-48 {
+    font-size: 48px;
+}
+
+.f-s-30 {
+font-size: 30px;
+}
+
+.f-s-12 {
+font-size: 12px;
+}
+
+.f-s-20 {
+    font-size: 20px;
+    }
+
+
+.f-s-16 {
+font-size: 16px;
+}
+  
+
+.cur-point{
+    cursor: pointer;
+}

@@ -1,0 +1,117 @@
+@import '../../../assets/css/variable.scss';
+
+
+@media screen and  (max-width: 900px) and (min-width: 767px)  {
+    .book-list{
+        .book-list-single{
+                .book-list-card{
+                    width: 20%;
+                }
+        }
+    }
+}
+
+@media screen and (max-width: 567px)  {
+    .book-list{
+        .book-list-head{
+            padding: 3% 0px!important;
+        }
+    }
+}
+.m-l-4{
+    margin-left: 4%;
+}
+
+.book-list{
+    .book-list-head{
+        padding: 1% 0px;
+        background-color: $color-white;
+        overflow: hidden;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        img{
+            margin-right: 10px;
+        }
+        .heading-title{
+            color:$color-primary;
+            line-height: 1.2;
+            font-family: $mont-bold;
+        }
+        .search_book{
+            height: 40px;
+            width: 96%;
+            border-radius: 4px;
+            padding: 10px 5px 10px 40px;
+            border: none;
+            background-color: $color-secondary;
+            font-family: $mont-bold;
+        }
+        .search_image{
+            position: absolute;
+            bottom: 9px;
+            left: 10px;
+            width: 19px;
+            height: 20px;
+        }
+       
+   
+          input[type=search]:focus-visible {
+           border: 2px solid $color-primary;
+    
+            outline: none;
+          }
+          .search_book::-webkit-search-cancel-button{
+            -webkit-appearance: none;
+            height: 18px;
+            width: 16px;
+            border-radius: 50em;
+            background: url('../../../assets/image/Cancel.svg') no-repeat 50% 50%;
+            background-size: contain;
+            opacity: 0;
+            pointer-events: none;
+        }
+        input[type=search]:focus::-webkit-search-cancel-button {
+            opacity: .3;
+            pointer-events: all;
+          }
+
+      
+       
+    }
+    .book-list-single{
+    
+
+         .book-list-card{
+            display: flex;
+            justify-content: center;
+            .book-list-card-section{
+                width: 114px;
+            }
+            img{
+                width: 114px;
+                height: 162px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px 0 rgb(211 209 238 / 50%);
+            }
+            .book-title{
+                color: $color-black;
+                font-family: $mont-bold;
+            }
+            .book-author{
+                color: $color-gray-dark;
+                font-style: $mont-reg;
+            }
+         }
+            
+
+           
+        
+        
+    }
+}
+
+.noFound{
+    color: $color-black;
+    font-family: $mont-bold;
+}

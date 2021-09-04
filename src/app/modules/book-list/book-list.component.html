@@ -1,0 +1,70 @@
+<div class="book-list w-100">
+
+    <div class="row book-list-head col-lg-12 col-md-12  col-sm-12 col-12  gx-0" *ngIf="topicName">
+        <div class="col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 col-12">
+            <div class="d-flex m-l-4 mb-2">
+                <img routerLink="/book-category" class="cur-point" src="assets/image/Back.svg">
+                <div class="heading-title f-s-30 p-0 ">
+
+                    {{topicName}}
+                </div>
+            </div>
+            <form #searchForm="ngForm">
+                <div class="m-l-4 position-relative">
+
+
+
+                    <input class="search_book" type="search" name="searchTerm" required ngModel>
+                    <img class="search_image" src="assets/image/Search.svg">
+                </div>
+            </form>
+        </div>
+
+
+
+    </div>
+
+    <div style="margin-top: 130px!important;">
+        <div class="row col-lg-10 offset-lg-1 col-md-10 offset-md-1 col-sm-10 offset-sm-1 book-list-single gx-0 d-flex  col-12 "
+            infinite-scroll [infiniteScrollDistance]="scrollDistance" [infiniteScrollUpDistance]="scrollUpDistance"
+            [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()"
+            *ngIf="allBooksData && allBooksData.length>0">
+            <div class="col-lg-2 col-md-2 col-sm-4 col-4 book-list-card mb-5 " *ngFor="let list of allBooksData"
+                (click)="viewBook(list)">
+
+                <div class="book-list-card-section cur-point">
+                    <div>
+                        <img
+                            [src]="list.formats['image/jpeg'] || 'https://islandpress.org/sites/default/files/default_book_cover_2015.jpg' ">
+                    </div>
+                    <div class="f-s-12 book-title">
+                        {{ (list.title .length>6)? (list.title | slice:0:25)+'..':(list.title )}}
+                    </div>
+                    <div class="f-s-12 book-author">
+                        <ng-container *ngIf="list.authors.length>0">
+                            {{ (list.authors[0].name .length>6)? (list.authors[0].name |
+                            slice:0:15)+'..':(list.authors[0].name )}}
+                        </ng-container>
+                        <ng-container *ngIf="list.authors.length==0">
+                            -
+                        </ng-container>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="d-flex mt-5 justify-content-center noFound"
+            *ngIf="allBooksData && allBooksData.length==0 && !showLoader">
+            No Data Found
+        </div>
+        <div class="d-flex justify-content-center" *ngIf="showLoader">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+
+</div>

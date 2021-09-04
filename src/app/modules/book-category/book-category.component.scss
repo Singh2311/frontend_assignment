@@ -1,0 +1,58 @@
+@import '../../../assets/css/variable.scss';
+
+
+
+
+.book-category{
+    .book-category-head{
+        background-image: url('../../../assets/image/Pattern.svg');
+        padding: 3% 0%;
+    .heading-title{
+        color:$color-primary;
+        line-height: 1.2;
+        font-family: $mont-bold;
+    }
+    .para-section{
+        color:$color-black;
+        line-height: 1.2;
+        font-family: $mont-bold;
+    }
+}
+.category-list{
+    .category-list-card{
+        border-radius: 4px;
+        padding: 0px 10px;
+        height: 50px;
+        background-color: $color-white;
+        box-shadow: 0 2px 5px 0 rgb(211 209 238 / 50%);
+        display: flex;
+        margin: 0px 0% 2% 0%;
+        cursor: pointer;
+      
+        img{
+            height: 25px;
+        }
+        .name-text{
+            font-family: $mont-bold;
+        }
+        &:hover{
+            background-color: $color-secondary;
+        }
+    }
+}
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    .book-category{
+    .category-list{
+        .category-list-card{
+    
+            margin: 0px 0% 6% 0%;
+          
+        }
+    }
+}
+  }
